@@ -236,7 +236,7 @@ function main() {
           'max_length': max_sequence_length.MPSelect('value'),
           'conversion_length': time_length.MPSelect('value') * time_unit.MPSelect('value'),
           'num_results': max_results.MPSelect('value'),
-          'start_event': start_event.MPEventSelect('value'),
+          'start_event': '$custom_event:128307', //start_event.MPEventSelect('value'), //NICK: HARDCODING CUSTOM EVENT
           'end_event': finish_event.MPEventSelect('value')
       };
       var prop = property.MPSelect('value');
