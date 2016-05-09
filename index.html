@@ -223,7 +223,7 @@ function main() {
     max_sequence_length.val(6);
     var max_results = $('#numResultsSelect').MPSelect({items: items(5, 9, 20, 50)});
     max_results.val(5);
-    var start_event = $('#startEventSelect').MPEventSelect();
+    var start_event = '$custom_event:128307'; //$('#startEventSelect').MPEventSelect(); //AK testing custom events
     var finish_event = $('#eventSelect').MPEventSelect();
     function runQuery() {
       $('.select_button:not(#eventSelect > .select_button, #propSelect > .select_button, #startEventSelect > .select_button, #peoplePropSelect > .select_button)').addClass('small');
