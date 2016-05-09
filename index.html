@@ -223,7 +223,7 @@ function main() {
     max_sequence_length.val(6);
     var max_results = $('#numResultsSelect').MPSelect({items: items(5, 9, 20, 50)});
     max_results.val(5);
-    var start_event = '$custom_event:128307'; //$('#startEventSelect').MPEventSelect(); //AK testing custom events
+    var start_event = $('#startEventSelect').MPEventSelect();
     var finish_event = $('#eventSelect').MPEventSelect();
     function runQuery() {
       $('.select_button:not(#eventSelect > .select_button, #propSelect > .select_button, #startEventSelect > .select_button, #peoplePropSelect > .select_button)').addClass('small');
@@ -236,7 +236,7 @@ function main() {
           'max_length': max_sequence_length.MPSelect('value'),
           'conversion_length': time_length.MPSelect('value') * time_unit.MPSelect('value'),
           'num_results': max_results.MPSelect('value'),
-          'start_event': '$custom_event:128307', //start_event.MPEventSelect('value'), //NICK: HARDCODING CUSTOM EVENT
+          'start_event': start_event.MPEventSelect('value'),
           'end_event': finish_event.MPEventSelect('value')
       };
       var prop = property.MPSelect('value');
